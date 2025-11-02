@@ -3,3 +3,39 @@
   height: 100vh;
   display: block;
 }
+
+.diagram-container {
+    display: flex; /* Active Flexbox pour la mise en page */
+    height: 90vh; /* Hauteur de l'éditeur */
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px; /* Largeur de la sidebar */
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+#cy {
+    flex-grow: 1; /* Le graphe prend tout l'espace restant */
+    height: 100%;
+    width: 100%; /* Définissez une taille explicite pour Cytoscape */
+    background-color: #ffffff;
+}
+
+.draggable-node {
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: grab; /* Curseur indiquant que l'élément est draggable */
+    display: flex;
+    align-items: center;
+}
+
+.draggable-node:hover {
+    background-color: #eef;
+}

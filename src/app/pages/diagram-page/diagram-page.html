@@ -1,4 +1,23 @@
-<div id="cy"></div>
+<div class="diagram-container">
+    
+    <div class="sidebar">
+        <h3>Composants Système</h3>
+        
+        <div 
+            *ngFor="let nodeType of availableNodeTypes" 
+            class="draggable-node"
+            draggable="true" 
+            [attr.data-node-type]="nodeType.type"
+            >
+            <span class="icon" [style.background-color]="nodeType.color"></span>
+            {{ nodeType.label }}
+        </div>
+
+    </div>
+
+    <div id="cy"></div>
+
+</div>
 
 <nz-modal 
   [(nzVisible)]="isVisible" 
