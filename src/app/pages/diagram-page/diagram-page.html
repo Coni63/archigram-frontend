@@ -1,0 +1,14 @@
+<div id="cy"></div>
+
+<nz-modal 
+  [(nzVisible)]="isVisible" 
+  [nzTitle]="currentTitle" 
+  (nzOnCancel)="handleCancel()" 
+  (nzOnOk)="handleOk()"
+  [nzZIndex]="9999" 
+>
+    <ng-container *nzModalContent>
+        <h3>Détails du Nœud:</h3>
+        <pre>{{ currentMetadatas | json }}</pre> 
+    </ng-container>
+</nz-modal>
